@@ -1,6 +1,5 @@
 import { type NextRequest } from "next/server";
 import getBrowser from "@/utils/browser";
-import yahooFinance from "@/yahoo-finance2/src/index-node";
 import dayjs from "dayjs";
 
 type Params = {
