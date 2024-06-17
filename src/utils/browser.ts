@@ -1,9 +1,13 @@
-import puppeteer, { type Browser } from "puppeteer";
+import { type Browser } from "puppeteer";
+import puppeteer from "puppeteer-extra";
+import StealthPlugin from "puppeteer-extra-plugin-stealth";
+
 // 获取浏览器对象
 export default async function getBrowser(force?: boolean): Promise<Browser> {
   if (!force && globalThis.browser) {
     return globalThis.browser;
   } else {
+    puppeteer.use(StealthPlugin());
     globalThis.browser = await puppeteer.launch({
       headless: true,
       args: ["--no-sandbox", "--disable-setuid-sandbox"],

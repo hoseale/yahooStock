@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -H 0.0.0.0",
+    "start:pm": "pm2 start npm --name yahoo -- start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -14,6 +15,8 @@
     "next": "14.2.3",
     "node-fetch": "^2.6.11",
     "puppeteer": "^22.10.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18",
     "react-dom": "^18",
     "yahoo-finance2": "^2.11.3"
