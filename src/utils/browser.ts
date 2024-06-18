@@ -1,10 +1,11 @@
-import { type Browser } from "puppeteer";
-import puppeteer from "puppeteer-extra";
+const chromium = require("chrome-aws-lambda");
+const { addExtra } = require("puppeteer-extra");
+const puppeteer = addExtra(chromium.puppeteer);
+
 require("puppeteer-extra-plugin-stealth/evasions/chrome.app");
 require("puppeteer-extra-plugin-stealth/evasions/chrome.csi");
 require("puppeteer-extra-plugin-stealth/evasions/chrome.loadTimes");
 require("puppeteer-extra-plugin-stealth/evasions/chrome.runtime");
-require("puppeteer-extra-plugin-stealth/evasions/defaultArgs"); // pkg warned me this one was missing
 require("puppeteer-extra-plugin-stealth/evasions/iframe.contentWindow");
 require("puppeteer-extra-plugin-stealth/evasions/media.codecs");
 require("puppeteer-extra-plugin-stealth/evasions/navigator.hardwareConcurrency");
@@ -17,10 +18,11 @@ require("puppeteer-extra-plugin-stealth/evasions/sourceurl");
 require("puppeteer-extra-plugin-stealth/evasions/user-agent-override");
 require("puppeteer-extra-plugin-stealth/evasions/webgl.vendor");
 require("puppeteer-extra-plugin-stealth/evasions/window.outerdimensions");
+require("puppeteer-extra-plugin-stealth/evasions/defaultArgs");
 require("puppeteer-extra-plugin-user-preferences");
 require("puppeteer-extra-plugin-user-data-dir");
 
-import StealthPlugin from "puppeteer-extra-plugin-stealth";
+const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 
 // 获取浏览器对象
 export default async function getBrowser(force?: boolean): Promise<Browser> {
