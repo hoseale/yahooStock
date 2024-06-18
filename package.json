@@ -11,15 +11,12 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
-    "chrome-aws-lambda": "^10.1.0",
     "dayjs": "^1.11.11",
     "next": "14.2.3",
     "node-fetch": "^2.6.11",
     "puppeteer": "^22.10.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "puppeteer-extra-plugin-user-data-dir": "^2.4.1",
-    "puppeteer-extra-plugin-user-preferences": "^2.4.1",
     "react": "^18",
     "react-dom": "^18",
     "yahoo-finance2": "^2.11.3"
