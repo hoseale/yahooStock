@@ -17,6 +17,9 @@ require("puppeteer-extra-plugin-stealth/evasions/sourceurl");
 require("puppeteer-extra-plugin-stealth/evasions/user-agent-override");
 require("puppeteer-extra-plugin-stealth/evasions/webgl.vendor");
 require("puppeteer-extra-plugin-stealth/evasions/window.outerdimensions");
+require("puppeteer-extra-plugin-user-preferences");
+require("puppeteer-extra-plugin-user-data-dir");
+
 import StealthPlugin from "puppeteer-extra-plugin-stealth";
 
 // 获取浏览器对象
