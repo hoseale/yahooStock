@@ -43,7 +43,10 @@ export async function GET(request: NextRequest) {
     }
   );
 
-  const data = await response.json();
-
-  return Response.json(data);
+  if (response.status == 200) {
+    const data = await response.json();
+    return Response.json(data);
+  } else {
+    return Response.json({ status: -1, error: response.statusText });
+  }
 }
