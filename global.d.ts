@@ -1,5 +1,5 @@
 import { type FC, type PropsWithChildren } from "react";
-import puppeteer, { type Browser } from "puppeteer-core";
+import puppeteer, { type Browser } from "puppeteer";
 
 // 声明全局的类型
 declare global {

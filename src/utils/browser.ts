@@ -1,4 +1,4 @@
-import puppeteer, { Browser } from "puppeteer-core";
+import puppeteer, { Browser } from "puppeteer";
 // const puppeteer = require("puppeteer-extra");
 // const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 
