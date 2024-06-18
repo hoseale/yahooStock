@@ -5,6 +5,8 @@ const nextConfig = {
           "puppeteer-extra",
           "puppeteer-extra-plugin-stealth",
           "puppeteer-extra-plugin-recaptcha",
+          "puppeteer-extra-plugin-user-data-dir",
+          "puppeteer-extra-plugin-user-preferences",
         ],
       }
 };
