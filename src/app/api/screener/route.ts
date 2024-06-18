@@ -60,7 +60,10 @@ export async function POST(request: NextRequest) {
           credentials: "include",
         }
       );
-      return await response.json();
+      if (response.status == 200) {
+        return await response.json();
+      }
+      return { status: -1, error: response.statusText };
     },
     { body, queryParam }
   );

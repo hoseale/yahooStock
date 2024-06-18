@@ -65,13 +65,17 @@ export async function GET(request: NextRequest) {
           credentials: "include",
         }
       );
-      return await response.json();
+      if (response.status == 200) {
+        const data = await response.json();
+        return {
+          status: 0,
+          data: data,
+        };
+      }
+      return { status: -1, error: response.statusText };
     },
     { searchParams }
   );
 
-  return Response.json({
-    status: 0,
-    data: result,
-  });
+  return Response.json(result);
 }
