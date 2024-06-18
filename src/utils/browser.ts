@@ -1,3 +1,4 @@
+import { Browser } from "puppeteer";
 const chromium = require("chrome-aws-lambda");
 const { addExtra } = require("puppeteer-extra");
 const puppeteer = addExtra(chromium.puppeteer);
