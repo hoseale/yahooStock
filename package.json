@@ -15,7 +15,7 @@
     "next": "14.2.3",
     "node-fetch": "^2.6.11",
     "puppeteer": "^22.10.0",
-    "puppeteer-core": "^10.4.0",
+    "puppeteer-core": "^22.11.1",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "react": "^18",
